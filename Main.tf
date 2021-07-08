@@ -5,7 +5,8 @@ terraform {
       source  = "hashicorp/azurerm"
       version = "=2.52.0"
     }  
-
+  }
+}
 # Configure the Microsoft Azure Provider
 provider "azurerm" {
   features {}
@@ -31,6 +32,4 @@ resource "azurerm_subnet" "mysubnet" {
   resource_group_name  = azurerm_resource_group.myrg.name
   virtual_network_name = azurerm_virtual_network.myvnet.name
   address_prefixes     = ["10.0.1.0/24"]
-}
-}
 }
